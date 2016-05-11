@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <title>Process of Samagon</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body>
+
+    <div class="container-fluid">
+        
+        <div style="padding-top:100px"></div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="panel" style="border:#ccc 1px solid">
+                    <div class="panel-heading" style="text-align:center"><h2>Let's do Samagona</h2></div>
+                    <div class="panel-body">
+                        <form role="form" action="http://localhost/samagon/samagon" method="post">
+                              <div class="form-group">
+                                <label for="watter">Water(m3):</label>
+                                <input type="number" class="form-control" name="water" placeholder="Tipe here quantity of the water" required="">
+                              </div>
+                              <div class="form-group">
+                                <label for="sugar">Sugar(Kg):</label>
+                                <input type="number" class="form-control" name="sugar" placeholder="Tipe here quantity of the sugar  " required="">
+                              </div>
+                              <div class="form-group">
+                                <label for="firewood">Firewood(Kg):</label>
+                                <input type="number" class="form-control" name="firewood" placeholder="Tipe here quantity of the firewood " required="">
+                              </div>
+                              <div class="form-group">
+                                <label for="pipe">Diameter of pipe(cm):</label>
+                                <input type="number" class="form-control" name="pipe" placeholder="Tipe here diameter of the pipe " required="">
+                              </div>
+
+                              <button type="submit" class="btn btn-block">Make samagona</button>
+                              
+                        </form>
+                        <div style="text-align: center; margin-top: 15px">
+                            <span class="alert-success">
+                                 
+                                      <?php
+                                       echo isset($samagon)? $samagon: null;
+                                      ?>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
