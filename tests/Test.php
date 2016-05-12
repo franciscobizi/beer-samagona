@@ -40,8 +40,9 @@ class Test extends PHPUnit_Framework_TestCase
     {
         
         $butilka = new Butilka();
-        $actual = $butilka->zberigate_samagona(1);
-        $expected = 100;
+        $result = $this->CLASS_Truba();
+        $actual = $butilka->zberigate_samagona($result);
+        $expected = 0;
 
         $this->assertEquals($expected,$actual);
     }
@@ -52,8 +53,8 @@ class Test extends PHPUnit_Framework_TestCase
     {
         
         $truba = new Truba();
-        $actual = $truba->condesator(2, 4);
-        $expected = 100;
+        $actual = $truba->condesator(2, 2);
+        $expected = 0.008;
 
         $this->assertEquals($expected,$actual);
     }
