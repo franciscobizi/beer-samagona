@@ -11,7 +11,7 @@ class Truba
     public function condesator($diametr, $para)
     {
         $this->diametr = $diametr;
-        $this->para = $para - 100;
+        $this->para = $para / 100;
         
         $result = $this->para / $this->diametr;
         //$samagon = $result{1};
