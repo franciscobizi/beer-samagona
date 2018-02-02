@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
- <title>Process of Samagon</title>
+ <title>Making Samagon</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<body>
-
-    <div class="container-fluid">
-        
-        <div style="padding-top:100px"></div>
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="panel" style="border:#ccc 1px solid">
-                    <div class="panel-heading" style="text-align:center"><h2>Let's do Samagona</h2></div>
-                    <div class="panel-body">
-                        <form role="form" action="http://localhost/samagon/samagon" method="post">
-                              <div class="form-group">
-                                <label for="watter">Water(liter):</label>
-                                <input type="number" class="form-control" name="water" placeholder="Tipe here quantity of the water" step="any" required="">
-                              </div>
-                              <div class="form-group">
-                                <label for="sugar">Sugar(Kg):</label>
-                                <input type="number" class="form-control" name="sugar" placeholder="Tipe here quantity of the sugar" step="any" required="">
-                              </div>
-                              <div class="form-group">
-                                <label for="firewood">Firewood(Kg):</label>
-                                <input type="number" class="form-control" name="firewood" placeholder="Tipe here quantity of the firewood " step="any" required="">
-                              </div>
-                              <div class="form-group">
-                                <label for="pipe">Diameter of pipe(cm):</label>
-                                <input type="number" class="form-control" name="pipe" placeholder="Tipe here diameter of the pipe " step="any" required="">
-                              </div>
-
-                              <button type="submit" class="btn btn-block">Make samagona</button>
-                              
-                        </form>
-                        <div style="text-align: center; margin-top: 15px">
-                            <span class="alert-success">
-                                 
-                                      <?php
-                                       echo isset($samagon)? $samagon: null;
-                                      ?>
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style type="text/css">
+    .panel{
+       border: 1px solid #ccc;
+       border-radius: 4px 4px 4px 4px;
+       padding: 10px 10px 10px 10px;
+       margin-top:80px;
+    }
+    label{
+      font-weight: bold;
+      color:#ccc;
+    }
+  </style>
+<body class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-4 panel">
+          <h2 class="text-center text-muted">Let's make Samagona</h2>
+          <hr>
+          <form role="form" action="http://localhost/samagon/made" method="post">
+            <div class="form-group">
+                <label for="watter">Water(liter):</label>
+                <input type="number" class="form-control" name="water" placeholder="Tipe here quantity of the water" step="any" required="">
             </div>
-            <div class="col-sm-4"></div>
-        </div>
-        
+            <div class="form-group">
+              <label for="sugar">Sugar(Kg):</label>
+              <input type="number" class="form-control" name="sugar" placeholder="Tipe here quantity of the sugar" step="any" required="">
+            </div>
+            <div class="form-group">
+              <label for="firewood">Firewood(Kg):</label>
+              <input type="number" class="form-control" name="firewood" placeholder="Tipe here quantity of the firewood " step="any" required="">
+            </div>
+            <div class="form-group">
+              <label for="pipe">Diameter of pipe(cm):</label>
+              <input type="number" class="form-control" name="pipe" placeholder="Tipe here diameter of the pipe " step="any" required="">
+            </div>
+            <button type="submit" class="btn btn-block"><h5>Make samagona</h5></button>
+          </form>
+          <div style="text-align: center; margin-top: 15px">
+            <?php
+              if(isset($samagon)){
+                print_r('<div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>'.$samagon.'</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              ');
+              }
+            ?>
+                                
+          </div>
     </div>
-    
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
