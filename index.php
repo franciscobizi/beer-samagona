@@ -4,6 +4,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 use App\Classes\Builder;
 require 'vendor/autoload.php';
 
+//Configuring settings
 $config = [
     'settings' => [
         'displayErrorDetails' => true,
@@ -29,7 +30,7 @@ $app->get('/', function ($request, $response) {
     return $this->view->render($response, 'home.phtml');
 });
 
-// Sama page route
+// Made page route
 
 $app->post('/made', function ($request, $response) {
 

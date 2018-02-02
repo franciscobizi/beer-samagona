@@ -1,6 +1,5 @@
 <?php
 namespace tests;
-//use PHPUnit_Framework_TestCase;
 use PHPUnit\Framework\TestCase;
 use App\Classes\Builder;
 /*  
@@ -8,9 +7,6 @@ use App\Classes\Builder;
 */
 final class BuilderTest extends TestCase
 {
-    /**
-     * @test
-     */
 
     public function testCanBeUsedAsBuilder()
     {
