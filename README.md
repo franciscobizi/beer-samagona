@@ -3,7 +3,7 @@ Making samagona with beer-samagona
 
 Simple App for helping calculation of all Russian's beer process. Calculating as temperature, vapor, volume and etc.
 
-Frameworks : Slim 3, Bootstrap 4
+Frameworks : Slim 3, PHPUnit, Bootstrap 4
 
 Language : PHP 7
 
